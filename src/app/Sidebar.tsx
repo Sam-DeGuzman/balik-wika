@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronDown, Menu } from 'lucide-react';
 
 const Sidebar = () => {
@@ -50,30 +51,30 @@ const Sidebar = () => {
                     </div>
                     {/* Navigation Buttons */}
                     <nav className='flex flex-col gap-4 w-full px-6 relative'>
-                        <a
-                            href='#'
+                        <Link
+                            href='/'
                             className='bg-red-400 text-white font-medium py-2 rounded-lg shadow text-center transition-colors hover:bg-red-500 cursor-pointer'
                         >
                             Dashboard
-                        </a>
-                        <a
-                            href='#'
+                        </Link>
+                        <Link
+                            href='/aralin'
                             className='bg-yellow-400 text-white font-medium py-2 rounded-lg shadow text-center transition-colors hover:bg-yellow-500 cursor-pointer'
                         >
                             Mga aralin
-                        </a>
-                        <a
-                            href='#'
+                        </Link>
+                        <Link
+                            href='/pagsusulit'
                             className='bg-green-400 text-white font-medium py-2 rounded-lg shadow text-center transition-colors hover:bg-green-500 cursor-pointer'
                         >
                             Pagsusulit
-                        </a>
-                        <a
-                            href='#'
+                        </Link>
+                        <Link
+                            href='/profile'
                             className='bg-blue-400 text-white font-medium py-2 rounded-lg shadow text-center transition-colors hover:bg-blue-500 cursor-pointer'
                         >
                             Aking profile
-                        </a>
+                        </Link>
                         <div className='relative'>
                             <button
                                 className='bg-purple-400 text-white font-medium py-2 rounded-lg shadow text-center flex items-center justify-between px-4 hover:bg-purple-500 cursor-pointer w-full'
@@ -91,12 +92,12 @@ const Sidebar = () => {
                             </button>
                             {settingsOpen && (
                                 <div className='absolute left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-10 flex flex-col overflow-hidden animate-fade-in'>
-                                    <a
-                                        href='#'
+                                    <Link
+                                        href='/settings'
                                         className='px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer text-left'
                                     >
                                         Account Settings
-                                    </a>
+                                    </Link>
                                 </div>
                             )}
                         </div>

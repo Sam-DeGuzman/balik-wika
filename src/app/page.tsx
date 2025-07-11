@@ -1,4 +1,6 @@
 import React from 'react';
+import GreetingBanner from '../components/GreetingBanner';
+import TopicCard from '../components/TopicCard';
 
 export default function Home() {
     return (
@@ -13,31 +15,29 @@ export default function Home() {
                 style={{ gridAutoRows: 'minmax(0,1fr)' }}
             >
                 {/* Top left box */}
-                <section className='relative md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2 bg-[#9486d8] rounded-3xl box-border flex flex-col lg:flex-row items-center lg:items-center pl-6 pr-6 py-8 min-h-[220px] overflow-visible'>
-                    <div className='flex-1 z-10 w-full md:pr-8'>
-                        <h1 className='text-2xl md:text-4xl font-bold text-[#e6e6e6] mb-4 leading-tight text-center md:text-left'>
+                <GreetingBanner
+                    className='md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2'
+                    greetingHeader={
+                        <>
                             Maligayang pagbabalik,
                             <br />
                             Lorence!{' '}
                             <span className='inline-block align-middle'>
                                 👋
                             </span>
-                        </h1>
-                        <p className='text-base md:text-xl text-[#e6e6e6] text-center md:text-left'>
+                        </>
+                    }
+                    greetingText={
+                        <>
                             Natuto ka na ng 70% ng iyong layunin ngayong linggo!
                             <br />
                             Ipagpatuloy mo lang at pagbutihin pa ang iyong
                             progreso.
-                        </p>
-                    </div>
-                    <div className='hidden md:flex z-20'>
-                        <img
-                            src='/images/welcome-image.png'
-                            alt='Welcome'
-                            className='hidden lg:block h-65 w-auto object-contain drop-shadow-lg mb-[-40px]'
-                        />
-                    </div>
-                </section>
+                        </>
+                    }
+                    imageSrc='/images/welcome-image.png'
+                    imageAlt='Welcome'
+                />
                 {/* Top right box (Badge section) */}
                 <div className='md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3 bg-white rounded-[22px] border-[2px] border-[#e5e7eb] box-border flex flex-col p-4 overflow-hidden shadow-none'>
                     <h3 className='font-bold text-2xl mb-6 text-gray-800'>
@@ -309,67 +309,15 @@ export default function Home() {
                         Suggested Topics
                     </h3>
                     <div className='overflow-x-auto'>
-                        <div className='flex flex-wrap gap-8 justify-center items-center'>
+                        <div className='flex flex-wrap gap-6 justify-start'>
                             {/* Pangngalan Card */}
-                            <div className='flex-1 min-w-[220px] md:min-w-[320px] max-w-[400px] h-[220px] md:h-[260px] bg-[#ffbe85] rounded-2xl flex flex-col items-center justify-between p-8 relative shadow-md'>
-                                <div className='w-full flex justify-between items-start mb-4'>
-                                    <div className='font-bold text-xl md:text-2xl text-white text-left'>
-                                        Pangngalan
-                                        <br />
-                                        (noun)
-                                    </div>
-                                    <span className='text-3xl ml-2'>
-                                        🪃
-                                    </span>{' '}
-                                    {/* Replace with your illustration */}
-                                </div>
-                                <button
-                                    className='mt-8 bg-white text-xs font-semibold rounded-md px-8 py-2 shadow-md transition hover:bg-gray-100 cursor-pointer'
-                                    style={{ color: '#ffbe85' }}
-                                >
-                                    Mag simula
-                                </button>
-                            </div>
+                            <TopicCard title='Pangngalan (noun)' icon='🪃' />
                             {/* Pandiwa Card */}
-                            <div className='flex-1 min-w-[220px] md:min-w-[320px] max-w-[400px] h-[220px] md:h-[260px] bg-[#d46cf7] rounded-2xl flex flex-col items-center justify-between p-8 relative shadow-md'>
-                                <div className='w-full flex justify-between items-start mb-4'>
-                                    <div className='font-bold text-xl md:text-2xl text-white text-left'>
-                                        Pandiwa
-                                        <br />
-                                        (verb)
-                                    </div>
-                                    <span className='text-3xl ml-2'>
-                                        💻
-                                    </span>{' '}
-                                    {/* Replace with your illustration */}
-                                </div>
-                                <button
-                                    className='mt-8 bg-white text-xs font-semibold rounded-md px-8 py-2 shadow-md transition hover:bg-gray-100 cursor-pointer'
-                                    style={{ color: '#d46cf7' }}
-                                >
-                                    Mag simula
-                                </button>
-                            </div>
+                            <TopicCard title='Pandiwa (verb)' icon='💻' />
                             {/* Pang-uri Card */}
-                            <div className='flex-1 min-w-[220px] md:min-w-[320px] max-w-[400px] h-[220px] md:h-[260px] bg-[#6ed6fb] rounded-2xl flex flex-col items-center justify-between p-8 relative shadow-md'>
-                                <div className='w-full flex justify-between items-start mb-4'>
-                                    <div className='font-bold text-xl md:text-2xl text-white text-left'>
-                                        Pang-uri
-                                        <br />
-                                        (adjective)
-                                    </div>
-                                    <span className='text-3xl ml-2'>
-                                        🎨
-                                    </span>{' '}
-                                    {/* Replace with your illustration */}
-                                </div>
-                                <button
-                                    className='mt-8 bg-white text-xs font-semibold rounded-md px-8 py-2 shadow-md transition hover:bg-gray-100 cursor-pointer'
-                                    style={{ color: '#6ed6fb' }}
-                                >
-                                    Mag simula
-                                </button>
-                            </div>
+                            <TopicCard title='Pang-uri (adjective)' icon='🎨' />
+                            {/* Panghalip Card (optional, as in AralinPage) */}
+                            <TopicCard title='Panghalip (pronoun)' icon='🧑‍🤝‍🧑' />
                         </div>
                     </div>
                 </div>
