@@ -34,7 +34,7 @@ const TopicCard: React.FC<TopicCardProps> = ({ title, icon }) => {
     const cardColor = getCardColor(title);
     return (
         <div
-            className='w-[300px] h-[220px] md:w-[320px] md:h-[260px] min-w-0 rounded-2xl flex flex-col items-center justify-between p-8 relative shadow-md'
+            className='w-[360px] h-[260px] md:w-[400px] md:h-[320px] min-w-0 rounded-2xl flex flex-col items-center justify-between p-8 relative shadow-md'
             style={{ backgroundColor: cardColor }}
         >
             <div className='w-full flex justify-between items-start mb-4'>

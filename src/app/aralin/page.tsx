@@ -10,21 +10,6 @@ export default function AralinPage() {
         { title: 'Pandiwa (verb)', icon: '💻' },
         { title: 'Pang-uri (adjective)', icon: '🎨' },
         { title: 'Panghalip (pronoun)', icon: '✨' },
-        { title: 'Pangatnig (conjunction)', icon: '🔗' },
-        { title: 'Pang-abay (adverb)', icon: '🚀' },
-        { title: 'Pang-angkop (ligature)', icon: '🧩' },
-        { title: 'Pang-ukol (preposition)', icon: '📍' },
-        { title: 'Pangngalan Pantangi (proper noun)', icon: '🏙️' },
-        { title: 'Pangngalan Pambalana (common noun)', icon: '🏡' },
-        { title: 'Panghalip Panao (personal pronoun)', icon: '🧑' },
-        { title: 'Panghalip Panaklaw (indefinite pronoun)', icon: '🌐' },
-        { title: 'Panghalip Pamatlig (demonstrative pronoun)', icon: '👆' },
-        { title: 'Panghalip Pananong (interrogative pronoun)', icon: '❓' },
-        { title: 'Pandiwang Palipat (transitive verb)', icon: '🔄' },
-        { title: 'Pandiwang Katawanin (intransitive verb)', icon: '🏃' },
-        { title: 'Pang-uri Panlarawan (descriptive adjective)', icon: '🖌️' },
-        { title: 'Pang-uri Pamilang (numeral adjective)', icon: '🔢' },
-        { title: 'Pang-uri Pantangi (proper adjective)', icon: '🏅' },
     ];
 
     const [search, setSearch] = useState('');
